@@ -1,0 +1,63 @@
+
+config:
+    name: "zhb_user_pwd_login"
+    User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+    base_url: "https://pc.zuihuibao.cn"
+    verify: False
+    parameters:
+        mobile-pwd-password-login_type-agency_channel_code: ${P(testdata/userpwdlogindata.csv)}
+#        pwd: ${P(testdata/userpwdlogindata.csv)}
+#        password: ${P(testdata/userpwdlogindata.csv)}
+    out_put:
+        - zhbsession
+
+teststeps:
+-
+    name: user_pwd_login_successs
+    request:
+        method: POST
+        url: /yiiapp/user-pwd/user-pwd-login
+        headers:
+            Content-Type: "application/x-www-form-urlencoded"
+        params:
+            mobile: $mobile
+            pwd: $pwd
+            password: $password
+            login_type: $login_type
+            agency_channel_code: $agency_channel_code
+    extract:
+        zhbsession: headers.Set-Cookie
+    validate:
+        - eq: ["status_code", 200]
+
+-
+    name: my info
+    request:
+        method: POST
+        url: /yiio2o/user/my-info
+        headers:
+            Content-Type: "application/x-www-form-urlencoded"
+            Cookie: $zhbsession
+    validate:
+        - eq: ["status_code", 200]
+
+-
+    name: price-configuration-merge
+    request:
+        method: POST
+        url: /yiiapp/car-ins/price-configuration-merge
+        headers:
+            Content-Type: "application/x-www-form-urlencoded"
+            Cookie: $zhbsession
+        data:
+            province: 云南
+            city: 昭通
+            product_source: web
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.data.selected_province", "云南"]
+        - eq: ["content.data.ins_companies[0].insurance_company", "TAIPINGYANG"]
+        - eq: ["content.data.ins_companies[0].district", "太保邵通01"]
+        - eq: ["content.data.ins_companies[0].com_id", "1115141001"]
+
+

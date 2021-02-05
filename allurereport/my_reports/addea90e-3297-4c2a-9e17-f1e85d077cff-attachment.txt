@@ -1,0 +1,187 @@
+[32m2021-01-21 16:57:34.697[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m451[0m - [1mStart to run testcase: zhb_user_pwd_login, TestCase ID: b3a9c3aa-d5b0-4352-a958-47670f9fbf3a[0m
+[32m2021-01-21 16:57:34.698[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m292[0m - [1mrun step begin: user_pwd_login_successs >>>>>>[0m
+[32m2021-01-21 16:57:34.891[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m186[0m - [34m[1mclient IP: 172.27.1.33, Port: 55823[0m
+[32m2021-01-21 16:57:34.892[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m194[0m - [34m[1mserver IP: 139.224.170.191, Port: 443[0m
+[32m2021-01-21 16:57:34.893[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : https://pc.zuihuibao.cn/yiiapp/user-pwd/user-pwd-login
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "HRUN-Request-ID": "HRUN-b3a9c3aa-d5b0-4352-a958-47670f9fbf3a-454698",
+    "Content-Length": "170"
+}
+cookies  : {}
+body     : mobile=10000500005&pwd=fdbc6f40e9e178dd990058bb52888552342a35bb7ed0ca547c9a67eeb2dbb5b6&password=fbc48070518afcb58878d596cefbf38c&login_type=23&agency_channel_code=jpd125
+[0m
+[32m2021-01-21 16:57:34.894[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "Tengine/2.2.2",
+    "Date": "Thu, 21 Jan 2021 08:57:34 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Powered-By": "PHP/5.6.37",
+    "Set-Cookie": "ZHBSESSID=5e0498abba934bf29c705ea32351bf9b; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/, user_id=530938; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/"
+}
+cookies  : {
+    "ZHBSESSID": "5e0498abba934bf29c705ea32351bf9b",
+    "user_id": "530938"
+}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "return_code": "0",
+    "return_message": "",
+    "data": {
+        "user_id": 530938,
+        "rongyun_token": "gjPPG/UYuf3NGsm4Q5SMExy3VZHOqPY3BHZWehNDwIRudMdxxleMNvJdwJZpQg3IS5xHIZubg2niUQHfZKVpgg==",
+        "head_img": "http://zhb-test-public.zuihuibao.com/user_avatar530938.jpg?timestamp=1611219454",
+        "agency_id": 125
+    }
+}
+[0m
+[32m2021-01-21 16:57:34.894[0m | [1mINFO    [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m218[0m - [1mstatus_code: 200, response_time(ms): 193.06 ms, response_length: 0 bytes[0m
+[32m2021-01-21 16:57:34.894[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mextract[0m:[36m176[0m - [1mextract mapping: {'zhbsession': 'ZHBSESSID=5e0498abba934bf29c705ea32351bf9b; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/, user_id=530938; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/'}[0m
+[32m2021-01-21 16:57:34.895[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert status_code equal 200(int)	==> pass[0m
+[32m2021-01-21 16:57:34.895[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m304[0m - [1mrun step end: user_pwd_login_successs <<<<<<
+[0m
+[32m2021-01-21 16:57:34.896[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m292[0m - [1mrun step begin: my info >>>>>>[0m
+[32m2021-01-21 16:57:35.237[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m186[0m - [34m[1mclient IP: 172.27.1.33, Port: 55823[0m
+[32m2021-01-21 16:57:35.237[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m194[0m - [34m[1mserver IP: 139.224.170.191, Port: 443[0m
+[32m2021-01-21 16:57:35.238[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : https://pc.zuihuibao.cn/yiio2o/user/my-info
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "ZHBSESSID=5e0498abba934bf29c705ea32351bf9b; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/, user_id=530938; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/",
+    "HRUN-Request-ID": "HRUN-b3a9c3aa-d5b0-4352-a958-47670f9fbf3a-454896",
+    "Content-Length": "0"
+}
+cookies  : {
+    "ZHBSESSID": "5e0498abba934bf29c705ea32351bf9b",
+    "user_id": "530938"
+}
+body     : None
+[0m
+[32m2021-01-21 16:57:35.239[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "Tengine/2.2.2",
+    "Date": "Thu, 21 Jan 2021 08:57:35 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Powered-By": "PHP/5.6.37"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "return_code": "0",
+    "return_message": "",
+    "data": {
+        "headimg": "http://zhb-test-public.zuihuibao.com/user_avatar530938.jpg?timestamp=1611219454",
+        "nickname": "Raymen",
+        "mobile": "10000500005",
+        "refund_balance": 296829.05,
+        "isAuth": 3,
+        "record_status": false,
+        "realname": "\u738b\u4e94",
+        "user_id": 530938,
+        "has_password": 1
+    }
+}
+[0m
+[32m2021-01-21 16:57:35.240[0m | [1mINFO    [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m218[0m - [1mstatus_code: 200, response_time(ms): 340.43 ms, response_length: 0 bytes[0m
+[32m2021-01-21 16:57:35.240[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert status_code equal 200(int)	==> pass[0m
+[32m2021-01-21 16:57:35.240[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert body.data.mobile equal 10000500005(str)	==> pass[0m
+[32m2021-01-21 16:57:35.241[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m304[0m - [1mrun step end: my info <<<<<<
+[0m
+[32m2021-01-21 16:57:35.241[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m292[0m - [1mrun step begin: get >>>>>>[0m
+[32m2021-01-21 16:57:35.469[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m186[0m - [34m[1mclient IP: 172.27.1.33, Port: 55823[0m
+[32m2021-01-21 16:57:35.469[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m194[0m - [34m[1mserver IP: 139.224.170.191, Port: 443[0m
+[32m2021-01-21 16:57:35.470[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== request details ==================
+method   : POST
+url      : https://pc.zuihuibao.cn/yiiapp/car-ins/price-configuration-merge
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "ZHBSESSID=5e0498abba934bf29c705ea32351bf9b; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/, user_id=530938; expires=Fri, 20-Jan-2023 20:00:00 GMT; Max-Age=63025346; path=/",
+    "HRUN-Request-ID": "HRUN-b3a9c3aa-d5b0-4352-a958-47670f9fbf3a-455242",
+    "Content-Length": "70"
+}
+cookies  : {
+    "ZHBSESSID": "5e0498abba934bf29c705ea32351bf9b",
+    "user_id": "530938"
+}
+body     : province=%E4%BA%91%E5%8D%97&city=%E6%98%AD%E9%80%9A&product_source=web
+[0m
+[32m2021-01-21 16:57:35.471[0m | [34m[1mDEBUG   [0m | [36mhttprunner.client[0m:[36mlog_print[0m:[36m40[0m - [34m[1m
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "Tengine/2.2.2",
+    "Date": "Thu, 21 Jan 2021 08:57:35 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Powered-By": "PHP/5.6.37"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json; charset=UTF-8
+body     : {
+    "return_code": "0",
+    "return_message": "",
+    "data": {
+        "selected_province": "\u4e91\u5357",
+        "selected_city": "\u662d\u901a",
+        "show_order_source_name": 0,
+        "ins_companies": [
+            {
+                "insurance_company": "TAIPINGYANG",
+                "insurance_company_cn": "\u592a\u5e73\u6d0b\u8d22\u9669",
+                "display_name": "\u592a\u5e73\u6d0b\u8d22\u9669\u2014\u592a\u4fdd\u90b5\u901a01",
+                "provider": "agent",
+                "province": "\u4e91\u5357",
+                "city": "\u662d\u901a",
+                "area": "",
+                "district": "\u592a\u4fdd\u90b5\u901a01",
+                "department": "",
+                "com_id": "1115141001",
+                "order_source": "125",
+                "order_source_name": "raymen",
+                "org_name": "\u592a\u5e73\u6d0b\u8d22\u9669\u2014\u592a\u4fdd\u90b5\u901a01",
+                "auto_select": "0",
+                "sort": 1
+            }
+        ]
+    }
+}
+[0m
+[32m2021-01-21 16:57:35.471[0m | [1mINFO    [0m | [36mhttprunner.client[0m:[36mrequest[0m:[36m218[0m - [1mstatus_code: 200, response_time(ms): 227.17 ms, response_length: 0 bytes[0m
+[32m2021-01-21 16:57:35.472[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert status_code equal 200(int)	==> pass[0m
+[32m2021-01-21 16:57:35.472[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert body.data.selected_province equal 云南(str)	==> pass[0m
+[32m2021-01-21 16:57:35.473[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert body.data.ins_companies[0].insurance_company equal TAIPINGYANG(str)	==> pass[0m
+[32m2021-01-21 16:57:35.473[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert body.data.ins_companies[0].district equal 太保邵通01(str)	==> pass[0m
+[32m2021-01-21 16:57:35.473[0m | [1mINFO    [0m | [36mhttprunner.response[0m:[36mvalidate[0m:[36m246[0m - [1massert body.data.ins_companies[0].com_id equal 1115141001(str)	==> pass[0m
+[32m2021-01-21 16:57:35.474[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36m__run_step[0m:[36m304[0m - [1mrun step end: get <<<<<<
+[0m
+[32m2021-01-21 16:57:35.474[0m | [1mINFO    [0m | [36mhttprunner.runner[0m:[36mtest_start[0m:[36m460[0m - [1mgenerate testcase log: /Users/admin/raymen/tutorial-env/httprun/demo/logs/b3a9c3aa-d5b0-4352-a958-47670f9fbf3a.run.log[0m

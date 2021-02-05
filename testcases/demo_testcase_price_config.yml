@@ -1,0 +1,8 @@
+
+config:
+    name: "zhb_user_pwd_login"
+    User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+    base_url: "https://pc.zuihuibao.cn"
+    verify: True
+    out_put:
+        - zhbsession
